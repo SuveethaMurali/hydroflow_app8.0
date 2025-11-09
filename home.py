@@ -50,7 +50,7 @@ OWM_KEY = read_key_from_config()
 st.sidebar.title("🌧️ HydroFlow Navigation")
 page_choice = st.sidebar.radio(
     "Go to:",
-    ["🏠 Home", "📘 Method Selection", "🌀 SCN Method", "📈 Strangers Method", "📊 Runoff Result"]
+    ["🏠 Home", "📘 Method Selection", "🌀 SCS CN Method", "📈 Strange's Method", "📊 Runoff Result"]
 )
 refresh = st.sidebar.button("🔄 Refresh Weather")
 
@@ -70,7 +70,7 @@ with col1:
 # ----------- Right Column: App Info + Weather -------------
 with col2:
     st.title("🌧️ HydroFlow — Runoff Estimation App")
-    st.write("Choose your method to estimate surface runoff using SCN or Stranger’s Method.")
+    st.write("Choose your method to estimate surface runoff using SCS CN or Strange’s Method.")
     st.markdown("---")
 
     st.subheader("💡 About HydroFlow")
@@ -78,7 +78,7 @@ with col2:
         """
         **HydroFlow** estimates surface runoff using:
         - **SCS Curve Number (CN) Method**
-        - **Stranger’s Method**
+        - **Strange’s Method**
         """
     )
 
@@ -119,9 +119,9 @@ with col2:
 # ----------- Sidebar Navigation Linking -------------
 if page_choice == "📘 Method Selection":
     st.switch_page("pages/1_Method_Selection.py")
-elif page_choice == "🌀 SCN Method":
-    st.switch_page("pages/2_SCN_Method.py")
-elif page_choice == "📈 Strangers Method":
-    st.switch_page("pages/3_Strangers_Method.py")
+elif page_choice == "🌀 SCS CN Method":
+    st.switch_page("pages/2_SCS CN_Method.py")
+elif page_choice == "📈 Strange's Method":
+    st.switch_page("pages/3_Strange's_Method.py")
 elif page_choice == "📊 Runoff Result":
     st.switch_page("pages/4_Runoff_Result.py")
