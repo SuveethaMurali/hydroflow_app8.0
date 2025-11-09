@@ -46,13 +46,7 @@ def read_key_from_config():
 # Read API key
 OWM_KEY = read_key_from_config()
 
-# ---------------- Sidebar Navigation ----------------
-st.sidebar.title("🌧️ HydroFlow Navigation")
-page_choice = st.sidebar.radio(
-    "Go to:",
-    ["🏠 Home", "📘 Method Selection", "🌀 SCS CN Method", "📈 Strange's Method", "📊 Runoff Result"]
-)
-refresh = st.sidebar.button("🔄 Refresh Weather")
+
 
 # ---------------- Layout ----------------
 col1, col2 = st.columns([1, 2], gap="large")
