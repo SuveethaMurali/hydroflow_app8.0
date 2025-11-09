@@ -1,6 +1,6 @@
-#  HydroFlow — Runoff Estimation Web App
+#  Runmeter — Runoff Estimation Web App
 
-HydroFlow estimates surface runoff using two hydrological methods:
+Runmeter estimates surface runoff using two hydrological methods:
 - **SCS Curve Number (CN) Method**
 - **Strange’s Method**
 
