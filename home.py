@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 
 # ---------------- Page Configuration ----------------
-st.set_page_config(page_title="HydroFlow — Runoff Estimation", page_icon="🌧️", layout="wide")
+st.set_page_config(page_title="Runmeter — Runoff Estimation", page_icon="🌧️", layout="wide")
 
 # ---------------- Helpers ----------------
 @st.cache_data(ttl=300)
@@ -63,14 +63,14 @@ with col1:
 
 # ----------- Right Column: App Info + Weather -------------
 with col2:
-    st.title("🌧️ HydroFlow — Runoff Estimation App")
+    st.title("🌧️ Runmeter — Runoff Estimation App")
     st.write("Choose your method to estimate surface runoff using SCS CN or Strange’s Method.")
     st.markdown("---")
 
-    st.subheader("💡 About HydroFlow")
+    st.subheader("💡 About Runmeter")
     st.write(
         """
-        **HydroFlow** estimates surface runoff using:
+        **Runmeter** estimates surface runoff using:
         - **SCS Curve Number (CN) Method**
         - **Strange’s Method**
         """
@@ -102,7 +102,7 @@ with col2:
             st.caption(f"{wx['desc']} · Updated: {last_updated}")
             if refresh:
                 st.cache_data.clear()
-                st.experimental_rerun()
+                st.rerun()
         except Exception:
             st.warning("⚠️ Unable to fetch live weather right now. Please try again later.")
 
